@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+:root {
+  --white: #ffffff;
+  --gray200: #eaecf0;
+  --gray500: #667085;
+  --gray700: #344054;
+  --green: #1fc0ae;
+  --circleGray: #eaecf0;
+  --hoverGreen: #1fc0ae;
+  --value: #8e99ab;
+}
+
+* {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+.wrapper {
+  width: 1440px;
+  height: 826px;
+}
+
+.frame {
+  display: flex;
+  height: 100%;
+}
+.frame__sidebar {
+  width: 276px;
+}
+.frame__main {
+  width: 1160px;
+  background: #f6f7fa;
+}
+
+.sidebar__nav {
+  min-height: 100%;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+  min-height: 100%;
+}
+
+.link {
+  color: #000;
+  display: flex;
+  width: 100%;
+  padding: 8px 12px 8px 48px;
+  align-items: center;
+  border-radius: 6px;
+  font-weight: 600;
+  background: url("/TestWork/logo/home-line.svg") no-repeat 12px 50%;
+  transition: all 0.3s;
+}
+
+.link:hover {
+  background-color: rgba(31, 192, 174, 0.19);
+  transition: all 0.3s;
+}
+
+.link:active {
+  transition: all 0.3s;
+  transform: scale(0.9);
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 0 100%;
+  transition: all 0.3s;
+}
+.nav__page1-link {
+  background: url("/TestWork/logo/page1link.svg") no-repeat 12px 50%;
+}
+.nav__page2-link {
+  background: url("/TestWork/logo/page2link.svg") no-repeat 12px 50%;
+}
+.nav__page3-link {
+  background: url("/TestWork/logo/page3link.svg") no-repeat 12px 50%;
+}
+.nav__settings {
+  display: inline-block;
+  width: 100%;
+  background: url("/TestWork/logo/settings.svg") no-repeat 12px 50%;
+}
+
+img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.main__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__header {
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  border-bottom: 1px solid var(--gray200);
+  margin-bottom: 54px;
+  padding: 44px 0 27px 0;
+}
+.main__states {
+  width: 100%;
+  margin-bottom: 48px;
+}
+.main__content {
+  width: 100%;
+  padding: 0 62px;
+}
+.main__info {
+  width: 100%;
+}
+.main__reorder {
+  background: var(--white);
+  border-radius: 12px;
+}
+
+.non-active {
+  color: #8e99ab;
+}
+
+.states__state-list {
+  display: flex;
+  width: 936px;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.state-list__state {
+  text-align: center;
+}
+
+.state__circle {
+  font-size: 16px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  z-index: 1;
+  box-shadow: 0px 5px 5px #8e99ab;
+  transition: all 0.3s;
+}
+.state__circle:hover {
+  filter: brightness(0.95);
+  transition: all 0.3s;
+}
+.state__subtext {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.green {
+  background-color: var(--green);
+  position: relative;
+}
+
+.green::after {
+  content: "- - - - - - - - - - - -";
+  display: block;
+  width: 144px;
+  height: 2px;
+  top: 40%;
+  left: 140%;
+  position: absolute;
+  z-index: 1;
+  color: rgb(62, 130, 255);
+  pointer-events: none;
+}
+
+.gray {
+  background-color: var(--circleGray);
+  position: relative;
+}
+
+.three:after {
+  content: "- - - - - - - - - - - -";
+  display: block;
+  width: 144px;
+  height: 2px;
+  top: 40%;
+  left: 140%;
+  position: absolute;
+  z-index: -1;
+  color: rgba(218, 218, 218, 0.3);
+  pointer-events: none;
+}
+
+.info__row {
+  display: flex;
+  justify-content: space-between;
+}
+.info__info-text {
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.info__info-text, .info__car {
+  border-radius: 12px;
+  width: 508px;
+  height: 131px;
+  background: var(--white);
+  margin-bottom: 14px;
+}
+.info__car {
+  padding: 34px 63px 37px 69px;
+  display: flex;
+  align-items: center;
+}
+
+.info-text__info-title {
+  font-size: 20px;
+  margin-bottom: 21px;
+}
+.info-text__info-number {
+  margin-bottom: 12px;
+}
+.info-text__info-number, .info-text__info-pup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.value {
+  color: var(--value);
+}
+
+.car__car-title {
+  text-align: center;
+  color: var(--green);
+  margin-right: 109.5px;
+}
+.car__car-image {
+  width: 109.5px;
+  height: 70.8px;
+}
+
+.car-title__titl {
+  font-size: 24px;
+  font-weight: 800;
+  display: inline-block;
+  margin-bottom: 6px;
+  line-height: 32px;
+}
+
+.reorder__row {
+  font-size: 12px;
+  padding: 17.3px 20px 12px 20px;
+}
+.reorder__title {
+  font-size: 20px;
+  margin-bottom: 21px;
+}
+
+.dropdown__label {
+  display: block;
+  color: var(--value);
+  margin-bottom: 6px;
+}
+.dropdown__container {
+  display: flex;
+  flex-direction: column;
+  gap: 17.4px;
+  margin-bottom: 52px;
+}
+.dropdown__select {
+  color: var(--value);
+  width: 996px;
+  border: 1px solid black;
+  border: 1px solid #eaecf0;
+  background: #f9fafb;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.dropdown__done-btn {
+  width: 80px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: var(--white);
+  background-color: var(--green);
+  font-weight: 800;
+  transition: all 0.2s;
+}
+.dropdown__done-btn:hover {
+  background-color: rgb(2, 129, 114);
+  color: var(--gray200);
+  transition: all 0.3s;
+}
+.dropdown__done-btn:active {
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
+.dropdown__btn-container {
+  display: flex;
+  justify-content: end;
+}
